@@ -1,3 +1,20 @@
-# firefox-onebar
+# firefox-onebar [[ Skip to Installation ]](#user-content-installation)
+My version of a single-bar layout for Firefox.
 
-<a href="https://nogithub.codeberg.page"><img src="https://nogithub.codeberg.page/badge.svg" alt="Please don't upload to GitHub"></a> A single bar for Firefox's UI. Fully works with other rearranged icons.
+# Installation
+
+#### In Firefox
+1. Visit `about:config` 
+    - Search for `toolkit.legacyUserProfileCustomizations.stylesheets`, set it to **true**
+2. Visit `about:support`
+3. In the `Profile Directory` row, copy the full path
+    - May look something like: `/home/{username}/.mozilla/firefox/...`
+
+#### Then, in a Terminal
+```sh
+cd #paste the path you copied before here
+
+git clone https://codeberg.org/Freeplay/firefox-onebar.git
+```
+
+#### Restart Firefox, and enjoy :)
