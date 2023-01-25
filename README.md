@@ -13,15 +13,21 @@
 
 |
 
-![Singe Tab as Titlebar](https://codeberg.org/Freeplay/pages/raw/commit/38b258e541938bcea7ad2e758b08f676343a8ac1/project-assets/onebar/images/single_tab.png) 
+![Singe Tab as Titlebar](https://codeberg.org/Freeplay/pages/raw/commit/64d54ae2fd3bade136399d129f3edc31d171e763/project-assets/onebar/images/single-tab.png) 
 
-|
+<!-- | -->
 
-![Compact Window Support](https://codeberg.org/Freeplay/pages/raw/commit/38b258e541938bcea7ad2e758b08f676343a8ac1/project-assets/onebar/images/compact_window.png)
+| ![Small Windows](https://codeberg.org/Freeplay/pages/raw/commit/64d54ae2fd3bade136399d129f3edc31d171e763/project-assets/onebar/images/small-windows-1.png) | ![](https://codeberg.org/Freeplay/pages/raw/commit/64d54ae2fd3bade136399d129f3edc31d171e763/project-assets/onebar/images/small-windows-2.png) |
+|--|--|
 
-|
+<!-- | -->
 
-![Works with _almost_ all customizations](https://codeberg.org/Freeplay/pages/raw/commit/38b258e541938bcea7ad2e758b08f676343a8ac1/project-assets/onebar/images/customizations.png)
+![Centered Search](https://codeberg.org/Freeplay/pages/raw/commit/64d54ae2fd3bade136399d129f3edc31d171e763/project-assets/onebar/images/search.png)
+
+<!-- | -->
+
+| ![Works with _almost_ all customizations](https://codeberg.org/Freeplay/pages/raw/commit/64d54ae2fd3bade136399d129f3edc31d171e763/project-assets/onebar/images/customizations.png) |
+|--|
 
 </details>
 
@@ -34,6 +40,8 @@
 # Installation
 
 </div>
+
+**WARNING:** Currently, this has only been tested on Gnome Linux.
 
 #### In Firefox
 - Firstly, make sure you are on the latest firefox stable version.
