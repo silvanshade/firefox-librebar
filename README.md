@@ -2,31 +2,38 @@
 
 ![Firefox Onebar](https://codeberg.org/Freeplay/pages/raw/branch/master/project-assets/onebar/images/header.png)
 
-
 <details>
 <summary>
 
-# What can it do?
+## What can it do?
 
 </summary>
 
 <br><br>
 
-![Singe Tab as Titlebar](https://codeberg.org/Freeplay/pages/raw/commit/38b258e541938bcea7ad2e758b08f676343a8ac1/project-assets/onebar/images/single_tab.png)
+|
+
+![Singe Tab as Titlebar](https://codeberg.org/Freeplay/pages/raw/commit/38b258e541938bcea7ad2e758b08f676343a8ac1/project-assets/onebar/images/single_tab.png) 
+
+|
+
 ![Compact Window Support](https://codeberg.org/Freeplay/pages/raw/commit/38b258e541938bcea7ad2e758b08f676343a8ac1/project-assets/onebar/images/compact_window.png)
+
+|
+
 ![Works with _almost_ all customizations](https://codeberg.org/Freeplay/pages/raw/commit/38b258e541938bcea7ad2e758b08f676343a8ac1/project-assets/onebar/images/customizations.png)
 
 </details>
 
+<br>
 
-</div>
-<br><br>
-
----
+|
 
 <br>
 
 # Installation
+
+</div>
 
 #### In Firefox
 - Firstly, make sure you are on the latest firefox stable version.
@@ -44,3 +51,5 @@ git clone https://codeberg.org/Freeplay/firefox-onebar.git
 ```
 
 #### Restart Firefox, and enjoy :)
+
+
