@@ -56,6 +56,10 @@ git clone https://codeberg.org/Freeplay/firefox-onebar.git
 <div align="center">
 <details>
 <summary>🍓</summary>
-Although I'm definitely lower priority than some others... If you support my work and can actually afford to, you can buy me a coffee here! (donate): https://www.buymeacoffee.com/freeplay
+Although I'm definitely lower priority than some others...<br>If you support my work and can actually afford to, 
+
+[**you can donate to me here :)**](https://www.buymeacoffee.com/freeplay)
+
+
 </details>
 </div>
