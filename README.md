@@ -1,5 +1,28 @@
-# firefox-onebar [[ Skip to Installation ]](#installation)
-My version of a single-bar layout for Firefox.
+<div align="center">
+
+![Firefox Onebar](https://codeberg.org/Freeplay/pages/raw/branch/master/project-assets/onebar/images/header.png)
+
+
+<details>
+<summary>
+
+# What can it do?
+
+</summary>
+
+![Singe Tab as Titlebar](https://codeberg.org/Freeplay/pages/raw/commit/38b258e541938bcea7ad2e758b08f676343a8ac1/project-assets/onebar/images/single_tab.png)
+![Compact Window Support](https://codeberg.org/Freeplay/pages/raw/commit/38b258e541938bcea7ad2e758b08f676343a8ac1/project-assets/onebar/images/compact_window.png)
+![Works with _almost_ all customizations](https://codeberg.org/Freeplay/pages/raw/commit/38b258e541938bcea7ad2e758b08f676343a8ac1/project-assets/onebar/images/customizations.png)
+
+</details>
+
+
+</div>
+<br><br>
+
+---
+
+<br>
 
 # Installation
 
