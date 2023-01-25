@@ -52,7 +52,7 @@ git clone https://codeberg.org/Freeplay/firefox-onebar.git
 
 #### Restart Firefox, and enjoy :)
 
-
+<br><br>
 <div align="center">
 <details>
 <summary>🍓</summary>
