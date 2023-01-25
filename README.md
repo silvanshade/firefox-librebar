@@ -53,9 +53,9 @@ git clone https://codeberg.org/Freeplay/firefox-onebar.git
 #### Restart Firefox, and enjoy :)
 
 
-<center>
+<div align="center">
 <details>
 <summary>🍓</summary>
-Although I'm definitely lower priority than some others... If you support my work and can actually afford to, you can buy me a coffee here! (donyate): https://www.buymeacoffee.com/freeplay
+Although I'm definitely lower priority than some others... If you support my work and can actually afford to, you can buy me a coffee here! (donate): https://www.buymeacoffee.com/freeplay
 </details>
-</center>
+</div>
