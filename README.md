@@ -55,7 +55,7 @@
 ```sh
 cd #paste the path you copied before here
 
-git clone https://codeberg.org/Freeplay/firefox-onebar.git
+git clone https://codeberg.org/Freeplay/firefox-onebar chrome
 ```
 
 #### Restart Firefox, and enjoy :)
