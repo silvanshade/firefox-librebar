@@ -58,6 +58,12 @@ cd #paste the path you copied before here
 git clone https://codeberg.org/Freeplay/firefox-onebar chrome
 ```
 
+#### OR, to add it manually:
+1. Go to the path you copied before in your file explorer
+2. If there is no `chrome` folder, create one
+3. Then, inside the `chrome` folder, create a file called `userChrome.css`
+    - Copy & Paste the contents of [`userChrome.css`](https://codeberg.org/Freeplay/Firefox-Onebar/raw/branch/main/userChrome.css) into the file
+
 #### Restart Firefox, and enjoy :)
 
 <br><br>
