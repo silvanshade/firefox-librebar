@@ -58,7 +58,7 @@
 ```sh
 cd #paste the path you copied before here
 
-git clone https://codeberg.org/Freeplay/firefox-onebar chrome
+git clone https://codeberg.org/Freeplay/firefox-onebar.git chrome
 ```
 
 #### OR, to add it manually:
@@ -68,6 +68,24 @@ git clone https://codeberg.org/Freeplay/firefox-onebar chrome
     - Copy & Paste the contents of [`userChrome.css`](https://codeberg.org/Freeplay/Firefox-Onebar/raw/branch/main/userChrome.css) into the file
 
 #### Restart Firefox, and enjoy :)
+
+<br>
+
+## Updating
+#### If you used the Terminal Method:
+```sh
+cd #the path you copied before
+
+cd chrome
+
+git pull
+```
+#### If you've added it manually:
+1. Go to the path you copied before
+2. Enter the `chrome` folder
+3. Copy & paste the contents of [`userChrome.css`](https://codeberg.org/Freeplay/Firefox-Onebar/raw/branch/main/userChrome.css) into the file
+
+#### Then, restart Firefox.
 
 <br><br>
 <div align="center">
