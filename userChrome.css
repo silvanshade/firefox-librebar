@@ -1,4 +1,6 @@
-/* I'll most likely rewrite this in stylus-lang in the future to prevent duplicated code */
+/* 1.0.1
+- Minor code improvements
+*/
 
 #navigator-toolbox {
     display: flex;
@@ -126,7 +128,7 @@ toolbarspring,
     padding-left: .5em !important;
     width: 100px !important;
     min-width: 50px !important;
-    transition: width .2s;
+    transition: width .2s .1s;
 }
 #urlbar-input:not(:focus-within) {
     mask: linear-gradient(to right, black calc(100% - 20px), transparent);
@@ -137,7 +139,6 @@ toolbarspring,
     --out-transition: font-size .2s, padding .2s, margin .2s, max-width .2s, opacity .05s;
     --in-transition: font-size .2s, padding .2s, margin .2s, max-width .2s, opacity .2s .15s;
 }
-/* #nav-bar > *, */
 #urlbar-container:hover #urlbar-input-container > box:not(#page-action-buttons),
 #urlbar-container:hover #page-action-buttons > *,
 #urlbar-container:hover #userContext-label {
@@ -145,26 +146,15 @@ toolbarspring,
     max-width: 200px;
 }
 #urlbar-container:not(:hover) toolbarbutton,
-#urlbar-container:not(:hover) #userContext-label {
-    font-size: 0 !important;
-    padding-inline: 0 !important;
-    margin-inline: 0 !important;
-    opacity: 0 !important;
-    transition: var(--out-transition) !important;
-}
+#urlbar-container:not(:hover) #userContext-label,
 #urlbar-container:not(:hover) #star-button-box,
 #urlbar-container:not(:hover) .verifiedDomain,
 #urlbar-container:not(:hover) #tracking-protection-icon-container,
 #urlbar-container:not(:hover) #pageAction-urlbar-_testpilot-containers,
-#urlbar-container:not(:hover) #pageActionButton {
-    max-width: 0 !important;
-    padding-inline: 0 !important;
-    margin-inline: 0 !important;
-    opacity: 0 !important;
-    transition: var(--out-transition) !important;
-}
-#urlbar-container:focus-within #urlbar-input-container > box:not(#identity-box),
-#urlbar-container:focus-within #page-action-buttons > hbox {
+#urlbar-container:not(:hover) #pageActionButton,
+#urlbar-container:focus-within #urlbar-input-container > box,
+#urlbar-container:focus-within #page-action-buttons > * {
+    font-size: 0 !important;
     max-width: 0 !important;
     padding-inline: 0 !important;
     margin-inline: 0 !important;
