@@ -76,9 +76,7 @@ git clone https://codeberg.org/Freeplay/firefox-onebar.git chrome
 ```sh
 cd #the path you copied before
 
-cd chrome
-
-git pull
+cd chrome && git pull
 ```
 #### If you've added it manually:
 1. Go to the path you copied before
