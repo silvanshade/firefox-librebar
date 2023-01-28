@@ -1,5 +1,5 @@
-/* 1.0.1
-- Minor code improvements
+/* 1.0.2
+- Hopefully fix window controls position on Windows
 */
 
 #navigator-toolbox {
@@ -245,6 +245,27 @@ toolbarspring,
         }
         
         
+    }
+}
+
+/* Windows OS Fixes */
+@media (-moz-platform: windows-win10),
+@media (-moz-platform: windows-win11) /* I don't actually know if it's -win11 or not, but I hope it is. */ {
+    :root[tabsintitlebar]{
+        --uc-window-control-width: 137px;
+    }
+
+    #nav-bar {
+        padding-right: var(--uc-window-control-width) !important;
+    }
+    .titlebar-buttonbox-container {
+        top: 0 !important;
+        right: 0 !important;
+        position: fixed !important;
+        z-index: 101 !important;
+    }
+    .toolbar-items {
+        max-width: calc(100vw - var(--uc-window-control-width)) !important;
     }
 }
 
