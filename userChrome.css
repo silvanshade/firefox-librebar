@@ -1,5 +1,6 @@
-/* 1.0.3
-- Windows: Hide window controls in fullscreen
+/* 1.0.4
+- Added a way of keeping the back & forwards button in the customize menu
+- Code improvements (I found out about :where)
 */
 
 #navigator-toolbox {
@@ -51,10 +52,43 @@ toolbarspring,
     box-shadow: none !important;
 }
 
-/* Hide unecessary buttons */
-#back-button, #forward-button {
-    display: none;
+
+/* Navigation buttons */
+#urlbar-container ~ :is(#back-button, #forward-button) {
+    display: none !important;
 }
+/* In the customize menu */
+:is(#wrapper-back-button, #wrapper-forward-button) {
+    opacity: 1 !important;
+}
+#wrapper-urlbar-container ~ :is(#wrapper-back-button, #wrapper-forward-button) {
+    opacity: .5 !important;
+}
+
+/* Add note in customize menu for nav buttons */
+#customization-header::after {
+    content: "To hide the back & forward buttons, simply drag them to the right of the URL bar";
+    background-color: blue;
+    border-radius: 4px;
+    padding: .4em .7em;
+    margin-top: 1em;
+    display: block;
+    width: max-content;
+}
+:root[customizing] .urlbar-input-box {
+    visibility: visible !important;
+}
+:root[customizing] .urlbar-input-box::before {
+    content: "https://";
+    margin-block: auto;
+}
+:root[customizing] #urlbar-input {
+    display: none !important;
+}
+
+
+
+
 
 /* Single Tab, *properties* also copy & pasted into "Small Window Fixes" */
 .tabbrowser-tab:only-of-type {
@@ -105,9 +139,6 @@ toolbarspring,
     transition: background-color .2s, width .2s, min-width .2s;
     position: static !important;
 }
-#urlbar-container .urlbar-input-box:focus-within {
-    width: 300px !important;
-}
 #urlbar {
     position: relative !important;
     top: unset !important;
@@ -128,7 +159,10 @@ toolbarspring,
     padding-left: .5em !important;
     width: 100px !important;
     min-width: 50px !important;
-    transition: width .2s .1s;
+    transition: width .2s;
+}
+#urlbar-container .urlbar-input-box:focus-within {
+    width: 300px !important;
 }
 #urlbar-input:not(:focus-within) {
     mask: linear-gradient(to right, black calc(100% - 20px), transparent);
@@ -145,13 +179,16 @@ toolbarspring,
     transition: var(--in-transition) !important;
     max-width: 200px;
 }
-#urlbar-container:not(:hover) toolbarbutton,
-#urlbar-container:not(:hover) #userContext-label,
-#urlbar-container:not(:hover) #star-button-box,
-#urlbar-container:not(:hover) .verifiedDomain,
-#urlbar-container:not(:hover) #tracking-protection-icon-container,
-#urlbar-container:not(:hover) #pageAction-urlbar-_testpilot-containers,
-#urlbar-container:not(:hover) #pageActionButton,
+
+#urlbar-container:not(:hover) :where(
+    toolbarbutton,
+    #userContext-label,
+    #star-button-box,
+    .verifiedDomain,
+    #tracking-protection-icon-container,
+    #pageAction-urlbar-_testpilot-containers,
+    #pageActionButton,
+),
 #urlbar-container:focus-within #urlbar-input-container > box,
 #urlbar-container:focus-within #page-action-buttons > * {
     font-size: 0 !important;

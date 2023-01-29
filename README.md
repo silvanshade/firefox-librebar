@@ -85,6 +85,14 @@ cd chrome && git pull
 
 #### Then, restart Firefox.
 
+<br>
+
+## Other Notes
+
+### To hide the back & forward buttons:
+In the customize menu, simply drag them to the right of the URL bar.
+
+
 <br><br>
 <div align="center">
 <details>
