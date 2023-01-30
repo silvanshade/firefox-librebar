@@ -96,6 +96,8 @@ In the customize menu, simply drag them to the right of the URL bar.
 
 ## Use with [Firefox UI Fix](https://github.com/black7375/Firefox-UI-Fix/tree/proton-style):
 
+- **NOTE:** This will not allow you to update the style via terminal.
+
 1. Install the [**Proton-style**](https://github.com/black7375/Firefox-UI-Fix/tree/proton-style#installation-guide) version of the Firefox UI fix **first**
 2. Once that is done, visit `about:support`
 3. In the `Profile Directory` row, click "Open Directory"
