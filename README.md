@@ -44,7 +44,7 @@
 
 </div>
 
-**WARNING:** Currently, this has only been tested on Gnome Linux.
+**WARNING:** Currently, this has only been tested on Gnome Linux. However, it does seem to work fine for others.
 
 #### In Firefox
 - Firstly, make sure you are on the latest firefox stable version.
