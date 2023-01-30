@@ -92,6 +92,18 @@ cd chrome && git pull
 ### To hide the back & forward buttons:
 In the customize menu, simply drag them to the right of the URL bar.
 
+<br>
+
+## Use with [Firefox UI Fix](https://github.com/black7375/Firefox-UI-Fix/tree/proton-style):
+
+1. Install the [**Proton-style**](https://github.com/black7375/Firefox-UI-Fix/tree/proton-style#installation-guide) version of the Firefox UI fix **first**
+2. Once that is done, visit `about:support`
+3. In the `Profile Directory` row, click "Open Directory"
+4. Enter the `chrome` folder
+5. Locate & open the `userChrome.css` file
+6. Copy & paste the contents of [`userChrome.css`](https://codeberg.org/Freeplay/Firefox-Onebar/raw/branch/main/userChrome.css) **at the end of the file**
+
+#### Then, restart Firefox.
 
 <br><br>
 <div align="center">
