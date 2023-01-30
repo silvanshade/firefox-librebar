@@ -47,7 +47,7 @@
 **WARNING:** Currently, this has only been tested on Gnome Linux. However, it does seem to work fine for others.
 
 #### In Firefox
-- Firstly, make sure you are on the latest firefox stable version.
+- Firstly, make sure you are on the latest firefox stable version. ESR & other editions may not work as intended.
 1. Visit `about:config` 
     - Search for `toolkit.legacyUserProfileCustomizations.stylesheets`, set it to **true**
 2. Visit `about:support`
