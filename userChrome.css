@@ -186,7 +186,7 @@ toolbarspring,
     transition: var(--in-transition) !important;
     max-width: 200px;
 }
-#mainPopupSet:not(:hover) ~ #navigator-toolbox-background #urlbar-container:not(:hover) :where(
+#urlbar-container:not(:hover) :where(
     toolbarbutton,
     #userContext-label,
     #star-button-box,
