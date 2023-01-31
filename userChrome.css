@@ -1,5 +1,5 @@
-/* 1.0.5
-- Minor tweaks for compatability with Firefox UI Fix
+/* 1.1.0
+- Smoother URLBar transitions & other tweaks
 */
 
 #navigator-toolbox {
@@ -49,6 +49,7 @@ toolbarspring,
 .tab-background { /* Just thought it looked nicer */
     margin-block: calc(2px + var(--tab-block-margin)) !important;
     box-shadow: none !important;
+    transition: background-color .2s;
 }
 
 
@@ -161,8 +162,8 @@ toolbarspring,
     min-width: 50px !important;
     transition: width .2s;
 }
-#urlbar-container .urlbar-input-box:focus-within {
-    width: 300px !important;
+#urlbar-container:focus-within, #urlbar-container:hover {
+    min-width: 300px !important;
 }
 #urlbar-input:not(:focus-within) {
     mask: linear-gradient(to right, black calc(100% - 20px), transparent);
@@ -176,8 +177,8 @@ toolbarspring,
 
 /* Hide unimportant buttons until hover */
 :root {
-    --out-transition: font-size .2s, padding .2s, margin .2s, max-width .2s, opacity .05s;
     --in-transition: font-size .2s, padding .2s, margin .2s, max-width .2s, opacity .2s .15s;
+    --out-transition: font-size .2s, padding .2s, margin .2s, max-width .2s, opacity .07s;
 }
 #urlbar-container:hover #urlbar-input-container > box:not(#page-action-buttons),
 #urlbar-container:hover #page-action-buttons > *,
@@ -185,8 +186,7 @@ toolbarspring,
     transition: var(--in-transition) !important;
     max-width: 200px;
 }
-
-#urlbar-container:not(:hover) :where(
+#mainPopupSet:not(:hover) ~ #navigator-toolbox-background #urlbar-container:not(:hover) :where(
     toolbarbutton,
     #userContext-label,
     #star-button-box,
@@ -195,8 +195,8 @@ toolbarspring,
     #pageAction-urlbar-_testpilot-containers,
     #pageActionButton,
 ),
-#urlbar-container:focus-within #urlbar-input-container > box,
-#urlbar-container:focus-within #page-action-buttons > * {
+#navigator-toolbox-background #urlbar-container:focus-within #urlbar-input-container > box,
+#navigator-toolbox-background #urlbar-container:focus-within #page-action-buttons > * {
     font-size: 0 !important;
     max-width: 0 !important;
     padding-inline: 0 !important;
@@ -206,12 +206,14 @@ toolbarspring,
 }
 
 /* Other Buttons */
+
+.toolbarbutton-icon {
+    transition: background-color .1s;
+}
+
 #nav-bar #search-container {
     min-width: 32px !important;
     transition: min-width .2s;
-}
-#nav-bar #search-container:focus-within {
-    min-width: 150px !important;
 }
 
 .titlebar-spacer,
