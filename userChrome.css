@@ -1,6 +1,5 @@
-/* 1.0.4
-- Added a way of keeping the back & forwards button in the customize menu
-- Code improvements (I found out about :where)
+/* 1.0.5
+- Minor tweaks for compatability with Firefox UI Fix
 */
 
 #navigator-toolbox {
@@ -69,6 +68,7 @@ toolbarspring,
 #customization-header::after {
     content: "To hide the back & forward buttons, simply drag them to the right of the URL bar";
     background-color: blue;
+    color: white;
     border-radius: 4px;
     padding: .4em .7em;
     margin-top: 1em;
@@ -91,11 +91,11 @@ toolbarspring,
 
 
 /* Single Tab, *properties* also copy & pasted into "Small Window Fixes" */
-.tabbrowser-tab:only-of-type {
+#titlebar #tabbrowser-tabs .tabbrowser-tab:only-of-type {
     width: max-content !important;
     -moz-box-flex: 0 !important;
     max-width: unset !important;
-    margin-right: auto !important;
+    margin-inline-end: auto !important;
     pointer-events: none;
     --toolbar-bgcolor: transparent !important;
     --tab-selected-bgimage: transparent !important;
@@ -166,6 +166,12 @@ toolbarspring,
 }
 #urlbar-input:not(:focus-within) {
     mask: linear-gradient(to right, black calc(100% - 20px), transparent);
+}
+#urlbar-background {
+    transition: border .2s;
+}
+#urlbar:hover:not([focused="true"]) > #urlbar-background {
+    --toolbar-field-border-color: var(--toolbar-field-focus-border-color)
 }
 
 /* Hide unimportant buttons until hover */
@@ -372,7 +378,7 @@ toolbarspring,
     }
 
     /* Single Tab styling */
-    .tabbrowser-tab {
+    #titlebar #tabbrowser-tabs .tabbrowser-tab {
         -moz-box-flex: unset !important;
         margin-right: auto !important;
         pointer-events: none;
@@ -393,4 +399,5 @@ toolbarspring,
         display: none !important;
     }
 }
+
 
