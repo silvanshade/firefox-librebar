@@ -95,7 +95,7 @@ cd chrome && git pull
 
 | Customization | Preference Name |
 |--|--|
-| Disable autohiding of URLbar icons (prevents movement of search bar) | `onebar.disable-autohide-of-URLbar-icons` |
+| Disable autohiding of URLbar icons (prevents movement of URLbar) | `onebar.disable-autohide-of-URLbar-icons` |
 | Disable single-tab styling | `onebar.disable-single-tab` |
 | Hide navigation buttons | `onebar.hide-navigation-buttons` |
 
