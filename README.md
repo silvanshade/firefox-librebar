@@ -18,16 +18,10 @@
 
 ![Singe Tab as Titlebar](https://codeberg.org/Freeplay/pages/raw/commit/64d54ae2fd3bade136399d129f3edc31d171e763/project-assets/onebar/images/single-tab.png) 
 
-<!-- | -->
-
 | ![Small Windows](https://codeberg.org/Freeplay/pages/raw/commit/64d54ae2fd3bade136399d129f3edc31d171e763/project-assets/onebar/images/small-windows-1.png) | ![](https://codeberg.org/Freeplay/pages/raw/commit/64d54ae2fd3bade136399d129f3edc31d171e763/project-assets/onebar/images/small-windows-2.png) |
 |--|--|
 
-<!-- | -->
-
 ![Centered Search](https://codeberg.org/Freeplay/pages/raw/commit/64d54ae2fd3bade136399d129f3edc31d171e763/project-assets/onebar/images/search.png)
-
-<!-- | -->
 
 | ![Works with _almost_ all customizations](https://codeberg.org/Freeplay/pages/raw/commit/64d54ae2fd3bade136399d129f3edc31d171e763/project-assets/onebar/images/customizations.png) |
 |--|
@@ -44,15 +38,17 @@
 
 </div>
 
-**WARNING:** Currently, this has only been tested on Gnome Linux. However, it does seem to work fine for others.
+**NOTES:** Currently, this has only been tested on Gnome Linux. However, it does seem to work fine for others. [**It is also possible to install with Firefox UI Fix**](#use-with-firefox-ui-fix)
+
 
 #### In Firefox
 - Firstly, make sure you are on the latest firefox stable version. ESR & other editions may not work as intended.
 1. Visit `about:config` 
     - Search for `toolkit.legacyUserProfileCustomizations.stylesheets`, set it to **true**
+    - While you're here, [you can enable other customizations you may want here](#customizations)
 2. Visit `about:support`
 3. In the `Profile Directory` row, copy the full path
-    - May look something like: `/home/{username}/.mozilla/firefox/...`
+    - May look something _like_: `/home/{username}/.mozilla/firefox/...`
 
 #### Then, in a Terminal
 ```sh
@@ -87,16 +83,25 @@ cd chrome && git pull
 
 <br>
 
-## Other Notes
 
-### To hide the back & forward buttons:
-In the customize menu, simply drag them to the right of the URL bar.
+## Customizations
+1. Copy the preference name of the customization you want to enable from the table below
+2. Visit `about:config`
+3. Paste the preference name into the search bar
+4. Click the plus button at the bottom right
+#### Then, restart Firefox.
+
+<br>
+
+| Customization | Preference Name |
+|--|--|
+| Disable autohiding of URLbar icons (prevents movement of search bar) | `onebar.disable-autohide-of-URLbar-icons` |
+| Disable single-tab styling | `onebar.disable-single-tab` |
+| Hide navigation buttons | `onebar.hide-navigation-buttons` |
 
 <br>
 
 ## Use with [Firefox UI Fix](https://github.com/black7375/Firefox-UI-Fix/tree/proton-style):
-
-- **NOTE:** This will not allow you to update the style via terminal.
 
 1. Install the [**Proton-style**](https://github.com/black7375/Firefox-UI-Fix/tree/proton-style#installation-guide) version of the Firefox UI fix **first**
 2. Once that is done, visit `about:support`
