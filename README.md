@@ -112,6 +112,15 @@ cd chrome && git pull
 
 #### Then, restart Firefox.
 
+<br>
+
+## Attribution
+If you modify this style or use it in your own work, please make sure to at least credit me somewhere visible with a [link to my website](https://freeplay.codeberg.page/) or [to this style's repository](https://codeberg.org/Freeplay/Firefox-Onebar) :)
+
+Make sure to see the license below for more details:
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+
 <br><br>
 <div align="center">
 <details>
