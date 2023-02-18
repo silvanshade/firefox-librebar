@@ -38,7 +38,7 @@
 
 </div>
 
-**NOTES:** Currently, this has only been tested on Gnome Linux. However, it does seem to work fine for others. [**It is also possible to install with Firefox UI Fix**](#use-with-firefox-ui-fix)
+**NOTES:** Currently, this has only been tested on Gnome Linux. However, it does seem to work fine for others. [**It is also possible to install with Firefox UI Fix**](#use-with-firefox-ui-fix-https-github-com-black7375-firefox-ui-fix-tree-proton-style)
 
 
 #### In Firefox
