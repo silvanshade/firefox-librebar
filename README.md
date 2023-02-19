@@ -38,7 +38,7 @@
 
 </div>
 
-**NOTES:** Currently, this has only been tested on Gnome Linux. However, it does seem to work fine for others. [**It is also possible to install with Firefox UI Fix**](#use-with-firefox-ui-fix)
+**NOTES:** Currently, this has only been tested on Gnome Linux. However, it does seem to work fine for others. [**It is also possible to install with Firefox UI Fix**](#use-with-firefox-ui-fix-https-github-com-black7375-firefox-ui-fix-tree-proton-style)
 
 
 #### In Firefox
@@ -95,8 +95,8 @@ cd chrome && git pull
 
 | Customization | Preference Name |
 |--|--|
-| Autohide **All** URLbar icons until hover | `onebar.hide-all-URLbar-icons` |
-| Disable autohiding of URLbar icons (prevents movement of search bar) | `onebar.disable-autohide-of-URLbar-icons` |
+| Autohide **all** URLbar icons until hover | `onebar.hide-all-URLbar-icons` |
+| Disable autohiding of URLbar icons (prevents movement of URLbar) | `onebar.disable-autohide-of-URLbar-icons` |
 | Disable truncating of `https://` | `onebar.disable-https-truncate` |
 | Disable centering of URLbar on focus | `onebar.disable-centering-of-URLbar` |
 | Disable single-tab styling | `onebar.disable-single-tab` |
@@ -114,6 +114,15 @@ cd chrome && git pull
 6. Copy & paste the contents of [`userChrome.css`](https://codeberg.org/Freeplay/Firefox-Onebar/raw/branch/main/userChrome.css) **at the end of the file**
 
 #### Then, restart Firefox.
+
+<br>
+
+## Attribution
+If you modify this style or use it in your own work, please make sure to at least credit me somewhere visible with a [link to my website](https://freeplay.codeberg.page/) or [to this style's repository](https://codeberg.org/Freeplay/Firefox-Onebar) :)
+
+Make sure to see the license below for more details:
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
 
 <br><br>
 <div align="center">
