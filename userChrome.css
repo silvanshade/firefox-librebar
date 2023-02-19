@@ -1,5 +1,8 @@
-/* 1.2.0
-- Add customization options
+/* 1.3.0
+- Truncated https:// from URL's
+- Added option to hide all URLbar buttons
+- Added option to not center the URLbar on focus
+- Fix being unable to drag tab in single-tab (oops)
 */
 
 #navigator-toolbox {
@@ -105,7 +108,6 @@ toolbarspring,
         -moz-box-flex: 0 !important;
         max-width: unset !important;
         margin-inline-end: auto !important;
-        pointer-events: none;
         --toolbar-bgcolor: transparent !important;
         --tab-selected-bgimage: transparent !important;
     }
@@ -159,6 +161,18 @@ toolbarspring,
     inset-inline: 20vw !important;
     width: unset !important;
 }
+@supports -moz-bool-pref("onebar.disable-centering-of-URLbar") {
+    #urlbar-container {
+        position: relative !important;
+    }
+    #urlbar[breakout-extend] {
+        /* width: 100% !important; */
+        inset-inline: 0 !important;
+    }
+    #urlbar[breakout-extend] .urlbar-input-box {
+        min-width: 400px !important;
+    }
+}
 #urlbar-input-container {
     display: flex !important;
 }
@@ -183,6 +197,17 @@ toolbarspring,
 }
 #urlbar:hover:not([focused="true"]) > #urlbar-background {
     --toolbar-field-border-color: var(--toolbar-field-focus-border-color)
+}
+
+/* Truncate https:// when collapsed */
+@supports not -moz-bool-pref("onebar.disable-https-truncate") {
+    #urlbar-input {
+        transition: margin .1s;
+    }
+    .verifiedDomain ~ .urlbar-input-box:not(:focus-within) #urlbar-input {
+        margin-left: -4ch !important;
+        mask: linear-gradient(to right, transparent 4ch, black 5ch calc(100% - 3ch), transparent) !important;
+    }
 }
 
 /* Hide unimportant buttons until hover */
@@ -217,7 +242,16 @@ toolbarspring,
         margin-inline: 0 !important;
         opacity: 0 !important;
         transition: var(--out-transition) !important;
-
+    }
+    @supports -moz-bool-pref("onebar.hide-all-URLbar-icons") {
+        #urlbar-container:not(:hover) :where(#page-action-buttons, #identity-box) > * {
+            font-size: 0 !important;
+            max-width: 0 !important;
+            padding-inline: 0 !important;
+            margin-inline: 0 !important;
+            opacity: 0 !important;
+            transition: var(--out-transition) !important;
+        }
     }
 }
 #navigator-toolbox-background #urlbar-container:focus-within #urlbar-input-container > box,
@@ -410,7 +444,6 @@ toolbarspring,
     #titlebar #tabbrowser-tabs .tabbrowser-tab {
         -moz-box-flex: unset !important;
         margin-right: auto !important;
-        pointer-events: none;
         max-width: unset !important;
         -moz-box-flex: 100 !important;
         --toolbar-bgcolor: transparent !important;

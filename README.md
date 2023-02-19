@@ -95,7 +95,10 @@ cd chrome && git pull
 
 | Customization | Preference Name |
 |--|--|
+| Autohide **All** URLbar icons until hover | `onebar.hide-all-URLbar-icons` |
 | Disable autohiding of URLbar icons (prevents movement of search bar) | `onebar.disable-autohide-of-URLbar-icons` |
+| Disable truncating of `https://` | `onebar.disable-https-truncate` |
+| Disable centering of URLbar on focus | `onebar.disable-centering-of-URLbar` |
 | Disable single-tab styling | `onebar.disable-single-tab` |
 | Hide navigation buttons | `onebar.hide-navigation-buttons` |
 
