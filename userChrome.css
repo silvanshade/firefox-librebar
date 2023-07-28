@@ -1,6 +1,7 @@
-/* 1.4.0
-- Fixed from latest Firefox update!
-- Added CSS variables for changing the URLbar width
+/* 1.4.1
+- Fixes
+- Fix padding in MacOS
+- Use proper windows media query
 */
 
 :root {
@@ -109,7 +110,8 @@ toolbarspring,
 @supports not -moz-bool-pref("onebar.disable-single-tab") {
     #titlebar #tabbrowser-tabs .tabbrowser-tab:only-of-type {
         width: max-content !important;
-        -moz-box-flex: 0 !important;
+        -moz-box-flex: unset !important;
+        flex: unset !important;
         max-width: unset !important;
         margin-inline-end: auto !important;
         --toolbar-bgcolor: transparent !important;
@@ -339,6 +341,17 @@ toolbarspring,
     @media (-moz-gtk-csd-minimize-button),
     (-moz-gtk-csd-maximize-button),
     (-moz-gtk-csd-close-button) {
+        .titlebar-buttonbox-container {
+            left: 0;
+            position: absolute;
+            display: block;
+            z-index: 101;
+        }
+        @media (-moz-gtk-csd-reversed-placement) {
+            #navigator-toolbox {
+                padding-left: calc(var(--uc-navbar-padding, 0) + var(--uc-win-ctrl-padding)) !important;
+            }
+        }
         /* window controls on the right */
         @media not (-moz-gtk-csd-reversed-placement) {
             #nav-bar {
@@ -346,21 +359,26 @@ toolbarspring,
             }
             .titlebar-buttonbox-container {
                 right: 0;
-                position: absolute;
-                display: block;
-                z-index: 101;
-            }
-            .toolbar-items {
-                max-width: calc(100vw - ((2 * var(--toolbarbutton-inner-padding) + 16px) + (var(--toolbarbutton-outer-padding) * 2)) - var(--tab-block-margin)) !important;
+                left: unset;
             }
         }
-        
-        
+        .toolbar-items {
+            max-width: calc(100vw - (
+              var(--uc-navbar-padding, 0) + var(--uc-win-ctrl-padding)
+            ));
+        }
     }
 }
 
-/* Windows OS Fixes */
-@media (-moz-platform: windows-win10), (-moz-platform: windows-win11) /* I don't actually know if it's -win11 or not, but I hope it is. */ {
+/* MacOS fixes */
+@media (-moz-platform: macos) {
+    .titlebar-buttonbox-container {
+        margin-right: 10px;
+    }
+}
+
+/* Windows OS fixes */
+@media (-moz-platform: windows-win10), (-moz-platform: windows) {
     :root[tabsintitlebar]{
         --uc-window-control-width: 137px;
         --uc-win-ctrl-padding: 12px;
