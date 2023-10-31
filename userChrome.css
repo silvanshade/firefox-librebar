@@ -1,7 +1,8 @@
-/* 1.4.1
-- Fixes
-- Fix padding in MacOS
-- Use proper windows media query
+/* 1.5.0
+- Added the option to hide all tabs
+Some quick fixes:
+- Focusing URLbar not hiding buttons
+- Tab title not being shown in single-tab
 */
 
 :root {
@@ -58,6 +59,14 @@ toolbarspring,
     margin-block: calc(2px + var(--tab-block-margin)) !important;
     box-shadow: none !important;
     transition: background-color .2s;
+}
+
+@supports -moz-bool-pref("onebar.hide-all-tabs-button") {
+    @media not (max-width: 700px) {
+        #alltabs-button {
+            display: none !important;
+        }
+    }
 }
 
 
@@ -263,8 +272,8 @@ toolbarspring,
         }
     }
 }
-#navigator-toolbox-background #urlbar-container:focus-within #urlbar-input-container > box,
-#navigator-toolbox-background #urlbar-container:focus-within #page-action-buttons > * {
+#urlbar-container #urlbar[focused="true"] #urlbar-input-container > box,
+#urlbar-container #urlbar[focused="true"] #page-action-buttons > * {
     font-size: 0 !important;
     max-width: 0 !important;
     padding-inline: 0 !important;
@@ -484,7 +493,7 @@ toolbarspring,
         display: none !important;
     }
 
-    .tabbrowser-tab:not([visuallyselected="true"]) {
+    .tabbrowser-tab:not([visuallyselected]) {
         display: none !important;
     }
 }
