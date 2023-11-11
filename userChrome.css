@@ -190,6 +190,9 @@ toolbarspring,
     #urlbar[breakout-extend] .urlbar-input-box {
         min-width: 400px !important;
     }
+    #urlbar-container:focus-within, #urlbar-container:hover {
+        min-width: var(--urlbar-open-width) !important;
+    }
 }
 #urlbar-input-container {
     display: flex !important;
@@ -204,9 +207,7 @@ toolbarspring,
     min-width: 50px !important;
     transition: width .2s;
 }
-#urlbar-container:focus-within, #urlbar-container:hover {
-    min-width: var(--urlbar-open-width) !important;
-}
+
 #urlbar-input:not(:focus-within) {
     mask: linear-gradient(to right, black calc(100% - 20px), transparent);
 }
