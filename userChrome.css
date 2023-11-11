@@ -207,7 +207,6 @@ toolbarspring,
     min-width: 50px !important;
     transition: width .2s;
 }
-
 #urlbar-input:not(:focus-within) {
     mask: linear-gradient(to right, black calc(100% - 20px), transparent);
 }
