@@ -218,7 +218,7 @@ toolbarspring,
 }
 
 /* Truncate https:// when collapsed */
-@media (not (-moz-bool-pref: "onebar.disable-https-truncate")) {
+@media (not (-moz-bool-pref: "onebar.disable-https-truncate")) and (not (-moz-bool-pref: "browser.urlbar.trimHttps")) {
     #urlbar-input {
         transition: margin .1s;
     }
