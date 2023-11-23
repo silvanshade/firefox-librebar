@@ -101,6 +101,7 @@ cd chrome && git pull
 | Disable centering of URLbar on focus | `onebar.disable-centering-of-URLbar` |
 | Disable single-tab styling | `onebar.disable-single-tab` |
 | Hide navigation buttons | `onebar.hide-navigation-buttons` |
+| Hide unified extensions button | `onebar.hide-unified-extensions-button` |
 | Hide all tabs button | `onebar.hide-all-tabs-button` |
 
 <br>
