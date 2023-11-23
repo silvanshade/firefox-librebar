@@ -1,8 +1,10 @@
-/* 1.5.0
-- Added the option to hide all tabs
-Some quick fixes:
-- Focusing URLbar not hiding buttons
-- Tab title not being shown in single-tab
+/* 1.6.0
+- Added option to hide navigation buttons conditionally
+- The hide navigation buttons option has been changed, see customizations
+
+Missed past contributions:
+- Fixed preferences #21 @prodrigestivill
+- #19 @techfoxxo
 */
 
 :root {
@@ -71,12 +73,13 @@ toolbarspring,
 
 
 /* Navigation buttons */
-@media (-moz-bool-pref: "onebar.hide-navigation-buttons") {
-    #back-button, #forward-button {
+@media (-moz-bool-pref: "onebar.conditional-navigation-buttons") {
+    :root:not([customizing]) #back-button[disabled],
+    :root:not([customizing]) #forward-button[disabled] {
         display: none !important;
     }
 }
-@media (not (-moz-bool-pref: "onebar.hide-navigation-buttons")) {
+@media (-moz-bool-pref: "onebar.hide-navigation-buttons") {
     #urlbar-container ~ :is(#back-button, #forward-button) {
         display: none !important;
     }
@@ -90,7 +93,7 @@ toolbarspring,
 
     /* Add note in customize menu for nav buttons */
     #customization-header::after {
-        content: "To hide the back & forward buttons, simply drag them to the right of the URL bar";
+        content: "To hide the back & forward buttons, drag them to the right of the URL bar";
         background-color: blue;
         color: white;
         border-radius: 4px;
@@ -99,16 +102,16 @@ toolbarspring,
         display: block;
         width: max-content;
     }
-    :root[customizing] .urlbar-input-box {
-        visibility: visible !important;
-    }
-    :root[customizing] .urlbar-input-box::before {
-        content: "https://";
-        margin-block: auto;
-    }
-    :root[customizing] #urlbar-input {
-        display: none !important;
-    }
+}
+:root[customizing] .urlbar-input-box {
+    visibility: visible !important;
+}
+:root[customizing] .urlbar-input-box::before {
+    content: "https://";
+    margin-block: auto;
+}
+:root[customizing] #urlbar-input {
+    display: none !important;
 }
 
 

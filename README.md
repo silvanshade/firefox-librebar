@@ -38,7 +38,8 @@
 
 </div>
 
-**NOTES:** Currently, this has only been tested on Gnome Linux. However, it does seem to work fine for others. [**It is also possible to install with Firefox UI Fix**](#use-with-firefox-ui-fix-https-github-com-black7375-firefox-ui-fix-tree-proton-style)
+> Currently, I can only test Gnome Linux. However it does work for other OS's. <br>
+> [**It is also possible to install with Firefox UI Fix**](#use-with-firefox-ui-fix-https-github-com-black7375-firefox-ui-fix-tree-proton-style)
 
 
 #### In Firefox
@@ -51,6 +52,7 @@
     - May look something _like_: `/home/{username}/.mozilla/firefox/...`
 
 #### Then, in a Terminal
+Run each line individually
 ```sh
 cd #paste the path you copied before here
 
@@ -100,9 +102,10 @@ cd chrome && git pull
 | Disable truncating of `https://` | `onebar.disable-https-truncate` |
 | Disable centering of URLbar on focus | `onebar.disable-centering-of-URLbar` |
 | Disable single-tab styling | `onebar.disable-single-tab` |
-| Hide navigation buttons | `onebar.hide-navigation-buttons` |
 | Hide unified extensions button | `onebar.hide-unified-extensions-button` |
 | Hide all tabs button | `onebar.hide-all-tabs-button` |
+| Hide navigation buttons when disabled | `onebar.conditional-navigation-buttons` |
+| Allow hiding navigation buttons by dragging to the right of the URLbar | `onebar.hide-navigation-buttons` |
 
 <br>
 
