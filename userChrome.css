@@ -61,7 +61,7 @@ toolbarspring,
     transition: background-color .2s;
 }
 
-@supports -moz-bool-pref("onebar.hide-all-tabs-button") {
+@media (-moz-bool-pref: "onebar.hide-all-tabs-button") {
     @media not (max-width: 700px) {
         #alltabs-button {
             display: none !important;
@@ -71,12 +71,12 @@ toolbarspring,
 
 
 /* Navigation buttons */
-@supports -moz-bool-pref("onebar.hide-navigation-buttons") {
+@media (-moz-bool-pref: "onebar.hide-navigation-buttons") {
     #back-button, #forward-button {
         display: none !important;
     }
 }
-@supports not -moz-bool-pref("onebar.hide-navigation-buttons") {
+@media (not (-moz-bool-pref: "onebar.hide-navigation-buttons")) {
     #urlbar-container ~ :is(#back-button, #forward-button) {
         display: none !important;
     }
@@ -116,7 +116,7 @@ toolbarspring,
 
 
 /* Single Tab, *properties* also copy & pasted into "Small Window Fixes" */
-@supports not -moz-bool-pref("onebar.disable-single-tab") {
+@media (not (-moz-bool-pref: "onebar.disable-single-tab")) {
     #titlebar #tabbrowser-tabs .tabbrowser-tab:only-of-type {
         width: max-content !important;
         -moz-box-flex: unset !important;
@@ -179,7 +179,7 @@ toolbarspring,
     inset-inline: 20vw !important;
     width: unset !important;
 }
-@supports -moz-bool-pref("onebar.disable-centering-of-URLbar") {
+@media (-moz-bool-pref: "onebar.disable-centering-of-URLbar") {
     #urlbar-container {
         position: relative !important;
     }
@@ -218,7 +218,7 @@ toolbarspring,
 }
 
 /* Truncate https:// when collapsed */
-@supports not -moz-bool-pref("onebar.disable-https-truncate") {
+@media (not (-moz-bool-pref: "onebar.disable-https-truncate")) {
     #urlbar-input {
         transition: margin .1s;
     }
@@ -239,12 +239,12 @@ toolbarspring,
     transition: var(--in-transition) !important;
     max-width: 200px;
 }
-@supports -moz-bool-pref("onebar.disable-autohide-of-URLbar-icons") {
+@media (-moz-bool-pref: "onebar.disable-autohide-of-URLbar-icons") {
     #urlbar-container {
         min-width: var(--urlbar-open-width) !important;
     }
 }
-@supports not -moz-bool-pref("onebar.disable-autohide-of-URLbar-icons") {
+@media (not (-moz-bool-pref: "onebar.disable-autohide-of-URLbar-icons")) {
     #urlbar-container:not(:hover) :where(
         toolbarbutton,
         #userContext-label,
@@ -261,7 +261,7 @@ toolbarspring,
         opacity: 0 !important;
         transition: var(--out-transition) !important;
     }
-    @supports -moz-bool-pref("onebar.hide-all-URLbar-icons") {
+    @media (-moz-bool-pref: "onebar.hide-all-URLbar-icons") {
         #urlbar-container:not(:hover) :where(#page-action-buttons, #identity-box) > * {
             font-size: 0 !important;
             max-width: 0 !important;
