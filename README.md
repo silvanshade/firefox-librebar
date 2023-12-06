@@ -131,12 +131,11 @@ Make sure to see the license below for more details:
 
 <br><br>
 <div align="center">
-<details>
-<summary>🍓</summary>
-Although I'm definitely lower priority than some others...<br>If you support my work and can actually afford to, 
+<img src="https://codeberg.org/Freeplay/pages/raw/branch/waf/assets/blobfox/blobfoxnomstrawberry.svg" width="42">
+
+Although I'm lower priority than others,<br>if you support my work and can afford to
 
 [**you can donate to me here :)**](https://www.buymeacoffee.com/freeplay)
 
 
-</details>
 </div>

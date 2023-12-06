@@ -1,10 +1,6 @@
-/* 1.6.0
-- Added option to hide navigation buttons conditionally
-- The hide navigation buttons option has been changed, see customizations
-
-Missed past contributions:
-- Fixed preferences #21 @prodrigestivill
-- #19 @techfoxxo
+/* 1.6.1
+- Prevent single tab window controls from overlaping website content (#16)
+    the bookmarks bar will still be overlaped, difficult to fix
 */
 
 :root {
@@ -410,8 +406,9 @@ toolbarspring,
         top: 0 !important;
         right: 0 !important;
         height: calc(var(--tab-min-height) + var(--toolbarbutton-inner-padding) + var(--toolbarbutton-outer-padding));
-        position: fixed !important;
+        position: absolute !important;
         z-index: 101 !important;
+        max-height: 100%;
     }
     .toolbar-items {
         max-width: calc(100vw - var(--uc-window-control-width)) !important;
