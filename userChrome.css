@@ -1,6 +1,5 @@
-/* 1.6.1
-- Prevent single tab window controls from overlaping website content (#16)
-    the bookmarks bar will still be overlaped, difficult to fix
+/* 1.6.2
+- Fixed bookmarks being indented when window controls are on the left
 */
 
 :root {
@@ -13,7 +12,6 @@
     flex-wrap: wrap;
     flex-direction: row;
     position: relative !important;
-    padding-left: var(--tab-block-margin);
 }
 
 
@@ -29,6 +27,7 @@ toolbarspring,
     width: 0;
     flex-grow: 1;
     overflow: hidden;
+    padding-left: var(--tab-block-margin);
 }
 #toolbar-menubar[inactive="true"] { /* Prevent duplicate window controls */
     display: none !important;
@@ -363,7 +362,7 @@ toolbarspring,
             z-index: 101;
         }
         @media (-moz-gtk-csd-reversed-placement) {
-            #navigator-toolbox {
+            #titlebar {
                 padding-left: calc(var(--uc-navbar-padding, 0) + var(--uc-win-ctrl-padding)) !important;
             }
         }
